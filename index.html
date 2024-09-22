@@ -95,16 +95,34 @@
             color: #3498db;
         }
     </style>
+    <script>
+    function changeLanguage() {
+        const lang = document.getElementById('language').value;
+        if (lang === 'en') {
+            // Code to switch content to English
+            alert('Language switched to English. Implement translation logic here.');
+        } else {
+            // Code to switch content to Swedish
+            alert('Language switched to Swedish. Implement translation logic here.');
+        }
+    }
+</script>
+
 </head>
 <body>
 
     <div class="sidebar">
-        <img src="profile.jpg" alt="Darwin Al Haddad">
-        <h1>Darwin Al Haddad</h1>
-        <p>Järfälla, Stockholm</p>
-        <p>0729294645</p>
-        <p><a href="mailto:darwin.haddad@gmail.com">darwin.haddad@gmail.com</a></p>
-    </div>
+    <img src="profile.jpg" alt="Darwin Al Haddad">
+    <h1>Darwin Al Haddad</h1>
+    <p>Järfälla, Stockholm</p>
+    <p>0729294645</p>
+    <p><a href="mailto:darwin.haddad@gmail.com">darwin.haddad@gmail.com</a></p>
+    <label for="language">Språk:</label>
+    <select id="language" onchange="changeLanguage()">
+        <option value="sv">Svenska</option>
+        <option value="en">English</option>
+    </select>
+</div>
 
     <div class="content">
         <div class="section">
