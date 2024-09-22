@@ -11,19 +11,17 @@
             margin: 0;
             padding: 0;
         }
-        .container {
-            display: flex;
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
         .sidebar {
             width: 250px;
             background-color: #2c3e50;
             color: white;
-            padding: 20px;
             text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .sidebar img {
             border-radius: 50%;
@@ -35,8 +33,11 @@
             font-size: 24px;
             margin-bottom: 10px;
         }
+        .sidebar p {
+            margin: 5px 0;
+        }
         .content {
-            flex: 1;
+            margin-left: 270px; /* مساحة كافية لعدم تجاوز النص للصورة */
             padding: 20px;
         }
         .section {
@@ -56,106 +57,106 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <img src="profile.jpg" alt="Darwin Al Haddad">
-            <h1>Darwin Al Haddad</h1>
-            <p>Järfälla, Stockholm</p>
-            <p>0729294645</p>
-            <p><a href="mailto:darwin.haddad@gmail.com" style="color: white;">darwin.haddad@gmail.com</a></p>
+
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Darwin Al Haddad">
+        <h1>Darwin Al Haddad</h1>
+        <p>Järfälla, Stockholm</p>
+        <p>0729294645</p>
+        <p><a href="mailto:darwin.haddad@gmail.com" style="color: white;">darwin.haddad@gmail.com</a></p>
+    </div>
+
+    <div class="content">
+        <div class="section">
+            <h2>Sammanfattning</h2>
+            <p>Erfaren IT-supporttekniker inom installation, konfiguration och felsökning av IT-system. Expert på användarstöd och operativa uppgifter med dokumenterad förmåga att förbättra systemeffektivitet och användarnöjdhet. Stark förmåga att arbeta i team och lösa komplexa tekniska problem.</p>
         </div>
 
-        <div class="content">
-            <div class="section">
-                <h2>Sammanfattning</h2>
-                <p>Erfaren IT-supporttekniker inom installation, konfiguration och felsökning av IT-system. Expert på användarstöd och operativa uppgifter med dokumenterad förmåga att förbättra systemeffektivitet och användarnöjdhet. Stark förmåga att arbeta i team och lösa komplexa tekniska problem.</p>
-            </div>
+        <div class="section">
+            <h2>Kunskaper och färdigheter</h2>
+            <h3>Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm</h3>
+            <ul>
+                <li>Installation, konfiguration och felsökning av hård- och mjukvara.</li>
+                <li>Utföra rutinmässiga driftuppgifter.</li>
+                <li>Schemaläggning och övervakning.</li>
+                <li>Hantera inkommande ärenden från användare.</li>
+                <li>Följa fördefinierade arbetsinstruktioner.</li>
+            </ul>
 
-            <div class="section">
-                <h2>Kunskaper och färdigheter</h2>
-                <h3>Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm</h3>
-                <ul>
-                    <li>Installation, konfiguration och felsökning av hård- och mjukvara.</li>
-                    <li>Utföra rutinmässiga driftuppgifter.</li>
-                    <li>Schemaläggning och övervakning.</li>
-                    <li>Hantera inkommande ärenden från användare.</li>
-                    <li>Följa fördefinierade arbetsinstruktioner.</li>
-                </ul>
+            <h3>Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm</h3>
+            <ul>
+                <li>Konfigurering av datorer, servrar och telefoner.</li>
+                <li>Stöldskyddsmärkning och rapportering av enheter samt sammanställning i kundfiler.</li>
+                <li>Utföra kvalitetskontroller och följa arbetsinstruktioner från kunder.</li>
+                <li>Delta aktivt i veckomöten med teamet.</li>
+                <li>Arbeta med höga krav på kvalitet och noggrannhet.</li>
+            </ul>
 
-                <h3>Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm</h3>
-                <ul>
-                    <li>Konfigurering av datorer, servrar och telefoner.</li>
-                    <li>Stöldskyddsmärkning och rapportering av enheter samt sammanställning i kundfiler.</li>
-                    <li>Utföra kvalitetskontroller och följa arbetsinstruktioner från kunder.</li>
-                    <li>Delta aktivt i veckomöten med teamet.</li>
-                    <li>Arbeta med höga krav på kvalitet och noggrannhet.</li>
-                </ul>
+            <h3>Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm</h3>
+            <ul>
+                <li>Scanna in produkter i affärssystem.</li>
+                <li>Samordna produkter utifrån en plocklista.</li>
+                <li>Lastning av kurirbilar.</li>
+            </ul>
 
-                <h3>Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm</h3>
-                <ul>
-                    <li>Scanna in produkter i affärssystem.</li>
-                    <li>Samordna produkter utifrån en plocklista.</li>
-                    <li>Lastning av kurirbilar.</li>
-                </ul>
+            <h3>Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm</h3>
+            <ul>
+                <li>Scanna in produkter i affärssystem.</li>
+                <li>Samordna produkter utifrån en plocklista.</li>
+                <li>Lastning av kurirbilar.</li>
+            </ul>
 
-                <h3>Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm</h3>
-                <ul>
-                    <li>Scanna in produkter i affärssystem.</li>
-                    <li>Samordna produkter utifrån en plocklista.</li>
-                    <li>Lastning av kurirbilar.</li>
-                </ul>
+            <h3>Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus</h3>
+            <ul>
+                <li>Installerar samt utför underhåll och felsökning på nätverk.</li>
+                <li>Hård- och mjukvaruinstallation, uppbyggnad konfigurering.</li>
+                <li>Uppgradering av datorer och datorsystem.</li>
+                <li>Felsökning i datorer och datorsystem.</li>
+            </ul>
 
-                <h3>Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus</h3>
-                <ul>
-                    <li>Installerar samt utför underhåll och felsökning på nätverk.</li>
-                    <li>Hård- och mjukvaruinstallation, uppbyggnad konfigurering.</li>
-                    <li>Uppgradering av datorer och datorsystem.</li>
-                    <li>Felsökning i datorer och datorsystem.</li>
-                </ul>
+            <h3>Revisor (2006 - 2007) - United Metals, Homs</h3>
+            <ul>
+                <li>Förbereda bokföringsposter.</li>
+                <li>Förbereda bokföringsrapporter.</li>
+                <li>Redovisningsrapporter.</li>
+            </ul>
 
-                <h3>Revisor (2006 - 2007) - United Metals, Homs</h3>
-                <ul>
-                    <li>Förbereda bokföringsposter.</li>
-                    <li>Förbereda bokföringsrapporter.</li>
-                    <li>Redovisningsrapporter.</li>
-                </ul>
+            <h3>Revisor (2002 - 2006) - Edwards Företag, Homs</h3>
+            <ul>
+                <li>Förbereder inköpsorder och försäljningsfakturor.</li>
+                <li>Redovisningsrapporter.</li>
+                <li>Kostnadsstyrning.</li>
+                <li>Kontroll av kassaflöde.</li>
+            </ul>
+        </div>
 
-                <h3>Revisor (2002 - 2006) - Edwards Företag, Homs</h3>
-                <ul>
-                    <li>Förbereder inköpsorder och försäljningsfakturor.</li>
-                    <li>Redovisningsrapporter.</li>
-                    <li>Kostnadsstyrning.</li>
-                    <li>Kontroll av kassaflöde.</li>
-                </ul>
-            </div>
+        <div class="section">
+            <h2>Utbildning</h2>
+            <p><strong>Jensen</strong> (10/2019 - 12/2020): Nätverk och Supporttekniker</p>
+            <p><strong>Competens</strong> (02/2017 - 08/2019): SFI och Grundläggande Skola</p>
+            <p><strong>Tishreen Universitet</strong> (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning</p>
+        </div>
 
-            <div class="section">
-                <h2>Utbildning</h2>
-                <p><strong>Jensen</strong> (10/2019 - 12/2020): Nätverk och Supporttekniker</p>
-                <p><strong>Competens</strong> (02/2017 - 08/2019): SFI och Grundläggande Skola</p>
-                <p><strong>Tishreen Universitet</strong> (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning</p>
-            </div>
+        <div class="section">
+            <h2>Färdigheter</h2>
+            <p><strong>Tekniska färdigheter:</strong> macOS, Linux, Windows, Nätverkskonfiguration, Felsökning, HTML, CSS, JavaScript.</p>
+            <p><strong>Mjuk färdigheter:</strong> Problemlösning, Teamarbete, Kommunikation, Projektledning, Tidsstyrning.</p>
+        </div>
 
-            <div class="section">
-                <h2>Färdigheter</h2>
-                <p><strong>Tekniska färdigheter:</strong> macOS, Linux, Windows, Nätverkskonfiguration, Felsökning, HTML, CSS, JavaScript.</p>
-                <p><strong>Mjuk färdigheter:</strong> Problemlösning, Teamarbete, Kommunikation, Projektledning, Tidsstyrning.</p>
-            </div>
+        <div class="section">
+            <h2>Certifikat</h2>
+            <p>Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.</p>
+            <p>HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.</p>
+            <p>SharePoint Online (Alison): Certifikat ID: 4349-29701203.</p>
+        </div>
 
-            <div class="section">
-                <h2>Certifikat</h2>
-                <p>Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.</p>
-                <p>HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.</p>
-                <p>SharePoint Online (Alison): Certifikat ID: 4349-29701203.</p>
-            </div>
-
-            <div class="section">
-                <h2>Språk</h2>
-                <p><strong>Arabiska:</strong> Modersmål.</p>
-                <p><strong>Svenska:</strong> Goda kunskaper.</p>
-                <p><strong>Engelska:</strong> Goda kunskaper.</p>
-            </div>
+        <div class="section">
+            <h2>Språk</h2>
+            <p><strong>Arabiska:</strong> Modersmål.</p>
+            <p><strong>Svenska:</strong> Goda kunskaper.</p>
+            <p><strong>Engelska:</strong> Goda kunskaper.</p>
         </div>
     </div>
+
 </body>
 </html>
