@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darwin Al Haddad - Portfolio</title>
+
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
     <style>
+        /* Grundläggande stil för hela sidan */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
@@ -13,6 +17,8 @@
             padding: 0;
             color: #333;
         }
+
+        /* Stil för sidofältet */
         .sidebar {
             width: 250px;
             background-color: #2c3e50;
@@ -20,24 +26,29 @@
             text-align: center;
             position: fixed;
             top: 0;
-            left: 20px;
+            left: 20px; /* Lämnar ett vänsteravstånd (högra marginal) */
             height: 100%;
             padding: 20px;
             box-sizing: border-box;
         }
+
         .sidebar img {
             border-radius: 50%;
             width: 200px;
             height: 200px;
             margin-bottom: 15px;
         }
+
         .sidebar h1 {
             font-size: 24px;
             margin-bottom: 10px;
         }
+
         .sidebar p {
             margin: 5px 0;
         }
+
+        /* Stil för huvudinnehållet */
         .content {
             margin-left: 300px;
             margin-right: 40px;
@@ -47,44 +58,60 @@
             max-width: 1000px;
             margin-top: 40px;
         }
+
+        /* Stil för sektioner och rubriker */
         .section {
             margin-bottom: 40px;
         }
+
         .section h2 {
             border-bottom: 3px solid #3498db;
             color: #3498db;
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
-        .btn {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
+
+        .section h3 {
+            color: #27ae60;
+            margin-bottom: 10px;
         }
-        .btn:hover {
-            background-color: #2980b9;
+
+        .section p, .section ul {
+            line-height: 1.8;
+            color: #333;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* Stil för sidofältets länkar */
+        .sidebar a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            color: #3498db;
         }
     </style>
 </head>
 <body>
+
     <div class="sidebar">
         <img src="profile.jpg" alt="Darwin Al Haddad">
         <h1>Darwin Al Haddad</h1>
         <p>Järfälla, Stockholm</p>
         <p>0729294645</p>
         <p><a href="mailto:darwin.haddad@gmail.com">darwin.haddad@gmail.com</a></p>
-        <a href="index_en.html" class="btn">Switch to English</a>
-        <a href="cv.pdf" class="btn" download>Download CV (PDF)</a>
     </div>
+
     <div class="content">
         <div class="section">
             <h2>Sammanfattning</h2>
-            <p>Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet.</p>
+            <p>Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet. Starkt samarbetsförmåga och vana att lösa komplexa tekniska problem.</p>
         </div>
+
         <div class="section">
             <h2>Kunskaper och färdigheter</h2>
             <h3>Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm</h3>
@@ -93,9 +120,81 @@
                 <li>Utförande av rutinmässiga driftuppgifter.</li>
                 <li>Schemaläggning och övervakning av system.</li>
                 <li>Hantera inkommande ärenden från användare.</li>
+                <li>Följa fördefinierade arbetsinstruktioner.</li>
             </ul>
-            <!-- أكمل بقية الأقسام -->
+
+            <h3>Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm</h3>
+            <ul>
+                <li>Konfigurering av datorer, servrar och telefoner.</li>
+                <li>Stöldskyddsmärkning och rapportering av enheter samt sammanställning i kundfiler.</li>
+                <li>Utförande av kvalitetskontroller och efterföljande av kundinstruktioner.</li>
+                <li>Delta aktivt i veckomöten med teamet.</li>
+                <li>Arbeta med höga krav på noggrannhet och kvalitet.</li>
+            </ul>
+
+            <h3>Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm</h3>
+            <ul>
+                <li>Skanning av produkter i affärssystem.</li>
+                <li>Samordning av produkter enligt plocklistor.</li>
+                <li>Lastning av kurirbilar.</li>
+            </ul>
+
+            <h3>Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm</h3>
+            <ul>
+                <li>Skanning av produkter i affärssystem.</li>
+                <li>Samordning av produkter enligt plocklistor.</li>
+                <li>Lastning av kurirbilar.</li>
+            </ul>
+
+            <h3>Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus</h3>
+            <ul>
+                <li>Installation och underhåll av nätverksutrustning.</li>
+                <li>Installation och konfiguration av hård- och mjukvara.</li>
+                <li>Uppgradering och felsökning av datorsystem.</li>
+            </ul>
+
+            <h3>Revisor (2006 - 2007) - United Metals, Homs</h3>
+            <ul>
+                <li>Förbereda bokföringsposter.</li>
+                <li>Förbereda finansiella rapporter.</li>
+                <li>Utföra redovisning och rapportering.</li>
+            </ul>
+
+            <h3>Revisor (2002 - 2006) - Edwards Företag, Homs</h3>
+            <ul>
+                <li>Förbereda inköpsordrar och försäljningsfakturor.</li>
+                <li>Redovisningsrapportering.</li>
+                <li>Kostnadskontroll och kassaflödeshantering.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Utbildning</h2>
+            <p><strong>Jensen</strong> (10/2019 - 12/2020): Nätverk och Supporttekniker</p>
+            <p><strong>Competens</strong> (02/2017 - 08/2019): SFI och Grundläggande Utbildning</p>
+            <p><strong>Tishreen Universitet</strong> (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning</p>
+        </div>
+
+        <div class="section">
+            <h2>Färdigheter</h2>
+            <p><strong>Tekniska färdigheter:</strong> macOS, Linux, Windows, Nätverkskonfiguration, Felsökning, HTML, CSS, JavaScript.</p>
+            <p><strong>Mjuk färdigheter:</strong> Problemlösning, Teamarbete, Kommunikation, Projektledning, Tidsstyrning.</p>
+        </div>
+
+        <div class="section">
+            <h2>Certifikat</h2>
+            <p>Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.</p>
+            <p>HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.</p>
+            <p>SharePoint Online (Alison): Certifikat ID: 4349-29701203.</p>
+        </div>
+
+        <div class="section">
+            <h2>Språk</h2>
+            <p><strong>Arabiska:</strong> Modersmål.</p>
+            <p><strong>Svenska:</strong> Goda kunskaper.</p>
+            <p><strong>Engelska:</strong> Goda kunskaper.</p>
         </div>
     </div>
+
 </body>
 </html>
