@@ -94,7 +94,38 @@
         .sidebar a:hover {
             color: #3498db;
         }
+
+        /* Stil för knappar */
+        .btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Stil för språkval */
+        .language-toggle {
+            margin-top: 20px;
+        }
     </style>
+    <script>
+        function toggleLanguage() {
+            // Implement your language toggle functionality here
+            alert("Språkbytet är inte implementerat.");
+        }
+
+        function downloadCV() {
+            // Implement your download CV functionality here
+            window.open('cv.pdf', '_blank'); // Make sure to provide the correct path to your PDF
+        }
+    </script>
 </head>
 <body>
 
@@ -104,6 +135,10 @@
         <p>Järfälla, Stockholm</p>
         <p>0729294645</p>
         <p><a href="mailto:darwin.haddad@gmail.com">darwin.haddad@gmail.com</a></p>
+        <div class="language-toggle">
+            <button class="btn" onclick="toggleLanguage()">Byt språk</button>
+        </div>
+        <button class="btn" onclick="downloadCV()">Ladda ner CV</button>
     </div>
 
     <div class="content">
