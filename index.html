@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darwin Al Haddad - Portfolio</title>
-
-    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
     <style>
-        /* Grundläggande stil för hela sidan */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
@@ -17,8 +13,6 @@
             padding: 0;
             color: #333;
         }
-
-        /* Stil för sidofältet */
         .sidebar {
             width: 250px;
             background-color: #2c3e50;
@@ -31,24 +25,19 @@
             padding: 20px;
             box-sizing: border-box;
         }
-
         .sidebar img {
             border-radius: 50%;
             width: 200px;
             height: 200px;
             margin-bottom: 15px;
         }
-
         .sidebar h1 {
             font-size: 24px;
             margin-bottom: 10px;
         }
-
         .sidebar p {
             margin: 5px 0;
         }
-
-        /* Stil för huvudinnehållet */
         .content {
             margin-left: 300px;
             margin-right: 40px;
@@ -58,44 +47,15 @@
             max-width: 1000px;
             margin-top: 40px;
         }
-
-        /* Stil för sektioner och rubriker */
         .section {
             margin-bottom: 40px;
         }
-
         .section h2 {
             border-bottom: 3px solid #3498db;
             color: #3498db;
             padding-bottom: 10px;
             margin-bottom: 15px;
         }
-
-        .section h3 {
-            color: #27ae60;
-            margin-bottom: 10px;
-        }
-
-        .section p, .section ul {
-            line-height: 1.8;
-            color: #333;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        /* Stil för sidofältets länkar */
-        .sidebar a {
-            color: #ecf0f1;
-            text-decoration: none;
-        }
-
-        .sidebar a:hover {
-            color: #3498db;
-        }
-
-        /* Stil för knappar */
         .btn {
             background-color: #3498db;
             color: white;
@@ -105,220 +65,37 @@
             cursor: pointer;
             margin-top: 10px;
         }
-
         .btn:hover {
             background-color: #2980b9;
         }
     </style>
-    <script>
-        let isSwedish = true;
-
-        function toggleLanguage() {
-            const summary = document.getElementById("summary");
-            const skillsTitle = document.getElementById("skills-title");
-            const educationTitle = document.getElementById("education-title");
-            const certificateTitle = document.getElementById("certificate-title");
-            const languageTitle = document.getElementById("language-title");
-
-            // نصوص باللغة السويدية
-            const swedishTexts = {
-                summary: "Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet. Starkt samarbetsförmåga och vana att lösa komplexa tekniska problem.",
-                skillsTitle: "Kunskaper och färdigheter",
-                educationTitle: "Utbildning",
-                certificateTitle: "Certifikat",
-                languageTitle: "Språk",
-                supportTech: "Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm",
-                logisticsTech: "Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm",
-                warehouseWorker1: "Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm",
-                warehouseWorker2: "Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm",
-                networkTech: "Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus",
-                auditor1: "Revisor (2006 - 2007) - United Metals, Homs",
-                auditor2: "Revisor (2002 - 2006) - Edwards Företag, Homs",
-                jensen: "Jensen (10/2019 - 12/2020): Nätverk och Supporttekniker",
-                competens: "Competens (02/2017 - 08/2019): SFI och Grundläggande Utbildning",
-                tishreen: "Tishreen Universitet (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning",
-                googleIT: "Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.",
-                htmlCert: "HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.",
-                sharepointCert: "SharePoint Online (Alison): Certifikat ID: 4349-29701203.",
-                arabic: "Arabiska: Modersmål.",
-                swedish: "Svenska: Goda kunskaper.",
-                english: "Engelska: Goda kunskaper."
-            };
-
-            // نصوص باللغة الإنجليزية
-            const englishTexts = {
-                summary: "Experienced IT support technician skilled in installation, configuration, and troubleshooting of IT systems. Expert in user support and operational tasks, with a proven ability to improve system efficiency and user satisfaction. Strong collaboration skills and accustomed to solving complex technical problems.",
-                skillsTitle: "Skills and Abilities",
-                educationTitle: "Education",
-                certificateTitle: "Certificates",
-                languageTitle: "Languages",
-                supportTech: "Support Technician (08/2023 - 02/2024) - Fujitsu, Stockholm",
-                logisticsTech: "Logistics Technician (05/2023 - 07/2023) - Ingram Micro, Stockholm",
-                warehouseWorker1: "Warehouse Worker (11/2022 - 02/2023) - PerformIQ, Stockholm",
-                warehouseWorker2: "Warehouse Worker (11/2021 - 09/2022) - Tranpenad AB, Stockholm",
-                networkTech: "Network Technician (2008 - 2011) - TechnoSpect, Damascus",
-                auditor1: "Auditor (2006 - 2007) - United Metals, Homs",
-                auditor2: "Auditor (2002 - 2006) - Edwards Company, Homs",
-                jensen: "Jensen (10/2019 - 12/2020): Network and Support Technician",
-                competens: "Competens (02/2017 - 08/2019): SFI and Basic Education",
-                tishreen: "Tishreen University (2003 - 2008): Bachelor's Degree in Economics and Accounting",
-                googleIT: "Google IT Support (Google): Certificate ID: 28X4U5VCUC5G.",
-                htmlCert: "HTML, CSS, and JavaScript for Web Developers (Coursera): Certificate ID: 7BLPNAX4AA9M.",
-                sharepointCert: "SharePoint Online (Alison): Certificate ID: 4349-29701203.",
-                arabic: "Arabic: Native speaker.",
-                swedish: "Swedish: Good knowledge.",
-                english: "English: Good knowledge."
-            };
-
-            if (isSwedish) {
-                summary.innerHTML = swedishTexts.summary;
-                skillsTitle.innerHTML = swedishTexts.skillsTitle;
-                educationTitle.innerHTML = swedishTexts.educationTitle;
-                certificateTitle.innerHTML = swedishTexts.certificateTitle;
-                languageTitle.innerHTML = swedishTexts.languageTitle;
-
-                document.getElementById("support-tech").innerHTML = swedishTexts.supportTech;
-                document.getElementById("logistics-tech").innerHTML = swedishTexts.logisticsTech;
-                document.getElementById("warehouse-worker1").innerHTML = swedishTexts.warehouseWorker1;
-                document.getElementById("warehouse-worker2").innerHTML = swedishTexts.warehouseWorker2;
-                document.getElementById("network-tech").innerHTML = swedishTexts.networkTech;
-                document.getElementById("auditor1").innerHTML = swedishTexts.auditor1;
-                document.getElementById("auditor2").innerHTML = swedishTexts.auditor2;
-                document.getElementById("jensen").innerHTML = swedishTexts.jensen;
-                document.getElementById("competens").innerHTML = swedishTexts.competens;
-                document.getElementById("tishreen").innerHTML = swedishTexts.tishreen;
-                document.getElementById("google-it").innerHTML = swedishTexts.googleIT;
-                document.getElementById("html-cert").innerHTML = swedishTexts.htmlCert;
-                document.getElementById("sharepoint-cert").innerHTML = swedishTexts.sharepointCert;
-                document.getElementById("arabic").innerHTML = swedishTexts.arabic;
-                document.getElementById("swedish").innerHTML = swedishTexts.swedish;
-                document.getElementById("english").innerHTML = swedishTexts.english;
-
-                isSwedish = false;
-            } else {
-                summary.innerHTML = englishTexts.summary;
-                skillsTitle.innerHTML = englishTexts.skillsTitle;
-                educationTitle.innerHTML = englishTexts.educationTitle;
-                certificateTitle.innerHTML = englishTexts.certificateTitle;
-                languageTitle.innerHTML = englishTexts.languageTitle;
-
-                document.getElementById("support-tech").innerHTML = englishTexts.supportTech;
-                document.getElementById("logistics-tech").innerHTML = englishTexts.logisticsTech;
-                document.getElementById("warehouse-worker1").innerHTML = englishTexts.warehouseWorker1;
-                document.getElementById("warehouse-worker2").innerHTML = englishTexts.warehouseWorker2;
-                document.getElementById("network-tech").innerHTML = englishTexts.networkTech;
-                document.getElementById("auditor1").innerHTML = englishTexts.auditor1;
-                document.getElementById("auditor2").innerHTML = englishTexts.auditor2;
-                document.getElementById("jensen").innerHTML = englishTexts.jensen;
-                document.getElementById("competens").innerHTML = englishTexts.competens;
-                document.getElementById("tishreen").innerHTML = englishTexts.tishreen;
-                document.getElementById("google-it").innerHTML = englishTexts.googleIT;
-                document.getElementById("html-cert").innerHTML = englishTexts.htmlCert;
-                document.getElementById("sharepoint-cert").innerHTML = englishTexts.sharepointCert;
-                document.getElementById("arabic").innerHTML = englishTexts.arabic;
-                document.getElementById("swedish").innerHTML = englishTexts.swedish;
-                document.getElementById("english").innerHTML = englishTexts.english;
-
-                isSwedish = true;
-            }
-        }
-    </script>
 </head>
 <body>
-
     <div class="sidebar">
         <img src="profile.jpg" alt="Darwin Al Haddad">
         <h1>Darwin Al Haddad</h1>
         <p>Järfälla, Stockholm</p>
         <p>0729294645</p>
         <p><a href="mailto:darwin.haddad@gmail.com">darwin.haddad@gmail.com</a></p>
-        <button class="btn" onclick="toggleLanguage()">Byt språk</button>
-        <a href="cv.pdf" class="btn" download>Hämta CV (PDF)</a>
+        <a href="index_en.html" class="btn">Switch to English</a>
+        <a href="cv.pdf" class="btn" download>Download CV (PDF)</a>
     </div>
-
     <div class="content">
         <div class="section">
-            <h2 id="summary">Sammanfattning</h2>
-            <p id="summary-text">Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet. Starkt samarbetsförmåga och vana att lösa komplexa tekniska problem.</p>
+            <h2>Sammanfattning</h2>
+            <p>Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet.</p>
         </div>
-
         <div class="section">
-            <h2 id="skills-title">Kunskaper och färdigheter</h2>
-            <h3 id="support-tech">Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm</h3>
+            <h2>Kunskaper och färdigheter</h2>
+            <h3>Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm</h3>
             <ul>
                 <li>Installation, konfiguration och felsökning av hård- och mjukvara.</li>
                 <li>Utförande av rutinmässiga driftuppgifter.</li>
                 <li>Schemaläggning och övervakning av system.</li>
                 <li>Hantera inkommande ärenden från användare.</li>
-                <li>Följa fördefinierade arbetsinstruktioner.</li>
             </ul>
-
-            <h3 id="logistics-tech">Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm</h3>
-            <ul>
-                <li>Konfigurering av datorer, servrar och telefoner.</li>
-                <li>Stöldskyddsmärkning och rapportering av enheter samt sammanställning i kundfiler.</li>
-                <li>Utförande av kvalitetskontroller och efterföljande av kundinstruktioner.</li>
-                <li>Delta aktivt i veckomöten med teamet.</li>
-                <li>Arbeta med höga krav på noggrannhet och kvalitet.</li>
-            </ul>
-
-            <h3 id="warehouse-worker1">Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm</h3>
-            <ul>
-                <li>Skanning av produkter i affärssystem.</li>
-                <li>Samordning av produkter enligt plocklistor.</li>
-                <li>Lastning av kurirbilar.</li>
-            </ul>
-
-            <h3 id="warehouse-worker2">Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm</h3>
-            <ul>
-                <li>Skanning av produkter i affärssystem.</li>
-                <li>Samordning av produkter enligt plocklistor.</li>
-                <li>Lastning av kurirbilar.</li>
-            </ul>
-
-            <h3 id="network-tech">Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus</h3>
-            <ul>
-                <li>Installation och underhåll av nätverksutrustning.</li>
-                <li>Installation och konfiguration av hård- och mjukvara.</li>
-                <li>Uppgradering och felsökning av datorsystem.</li>
-            </ul>
-
-            <h3 id="auditor1">Revisor (2006 - 2007) - United Metals, Homs</h3>
-            <ul>
-                <li>Förbereda bokföringsposter.</li>
-                <li>Förbereda finansiella rapporter.</li>
-                <li>Utföra redovisning och rapportering.</li>
-            </ul>
-
-            <h3 id="auditor2">Revisor (2002 - 2006) - Edwards Företag, Homs</h3>
-            <ul>
-                <li>Förbereda inköpsordrar och försäljningsfakturor.</li>
-                <li>Redovisningsrapportering.</li>
-                <li>Kostnadskontroll och kassaflödeshantering.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2 id="education-title">Utbildning</h2>
-            <p id="jensen"><strong>Jensen</strong> (10/2019 - 12/2020): Nätverk och Supporttekniker</p>
-            <p id="competens"><strong>Competens</strong> (02/2017 - 08/2019): SFI och Grundläggande Utbildning</p>
-            <p id="tishreen"><strong>Tishreen Universitet</strong> (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning</p>
-        </div>
-
-        <div class="section">
-            <h2 id="certificate-title">Certifikat</h2>
-            <p id="google-it">Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.</p>
-            <p id="html-cert">HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.</p>
-            <p id="sharepoint-cert">SharePoint Online (Alison): Certifikat ID: 4349-29701203.</p>
-        </div>
-
-        <div class="section">
-            <h2 id="language-title">Språk</h2>
-            <p id="arabic"><strong>Arabiska:</strong> Modersmål.</p>
-            <p id="swedish"><strong>Svenska:</strong> Goda kunskaper.</p>
-            <p id="english"><strong>Engelska:</strong> Goda kunskaper.</p>
+            <!-- أكمل بقية الأقسام -->
         </div>
     </div>
-
 </body>
 </html>
