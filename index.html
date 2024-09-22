@@ -26,7 +26,7 @@
             text-align: center;
             position: fixed;
             top: 0;
-            left: 20px; /* Lämnar ett vänsteravstånd (högra marginal) */
+            left: 20px;
             height: 100%;
             padding: 20px;
             box-sizing: border-box;
@@ -120,24 +120,107 @@
             const certificateTitle = document.getElementById("certificate-title");
             const languageTitle = document.getElementById("language-title");
 
-            if (isSwedish) {
-                summary.innerHTML = "Experienced IT support technician skilled in installation, configuration, and troubleshooting of IT systems. Expert in user support and operational tasks, with a proven ability to improve system efficiency and user satisfaction. Strong collaboration skills and accustomed to solving complex technical problems.";
-                skillsTitle.innerHTML = "Skills and Abilities";
-                educationTitle.innerHTML = "Education";
-                certificateTitle.innerHTML = "Certificates";
-                languageTitle.innerHTML = "Languages";
-            } else {
-                summary.innerHTML = "Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet. Starkt samarbetsförmåga och vana att lösa komplexa tekniska problem.";
-                skillsTitle.innerHTML = "Kunskaper och färdigheter";
-                educationTitle.innerHTML = "Utbildning";
-                certificateTitle.innerHTML = "Certifikat";
-                languageTitle.innerHTML = "Språk";
-            }
-            isSwedish = !isSwedish;
-        }
+            // نصوص باللغة السويدية
+            const swedishTexts = {
+                summary: "Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet. Starkt samarbetsförmåga och vana att lösa komplexa tekniska problem.",
+                skillsTitle: "Kunskaper och färdigheter",
+                educationTitle: "Utbildning",
+                certificateTitle: "Certifikat",
+                languageTitle: "Språk",
+                supportTech: "Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm",
+                logisticsTech: "Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm",
+                warehouseWorker1: "Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm",
+                warehouseWorker2: "Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm",
+                networkTech: "Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus",
+                auditor1: "Revisor (2006 - 2007) - United Metals, Homs",
+                auditor2: "Revisor (2002 - 2006) - Edwards Företag, Homs",
+                jensen: "Jensen (10/2019 - 12/2020): Nätverk och Supporttekniker",
+                competens: "Competens (02/2017 - 08/2019): SFI och Grundläggande Utbildning",
+                tishreen: "Tishreen Universitet (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning",
+                googleIT: "Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.",
+                htmlCert: "HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.",
+                sharepointCert: "SharePoint Online (Alison): Certifikat ID: 4349-29701203.",
+                arabic: "Arabiska: Modersmål.",
+                swedish: "Svenska: Goda kunskaper.",
+                english: "Engelska: Goda kunskaper."
+            };
 
-        function downloadCV() {
-            window.open('cv.pdf', '_blank'); // Make sure to provide the correct path to your PDF
+            // نصوص باللغة الإنجليزية
+            const englishTexts = {
+                summary: "Experienced IT support technician skilled in installation, configuration, and troubleshooting of IT systems. Expert in user support and operational tasks, with a proven ability to improve system efficiency and user satisfaction. Strong collaboration skills and accustomed to solving complex technical problems.",
+                skillsTitle: "Skills and Abilities",
+                educationTitle: "Education",
+                certificateTitle: "Certificates",
+                languageTitle: "Languages",
+                supportTech: "Support Technician (08/2023 - 02/2024) - Fujitsu, Stockholm",
+                logisticsTech: "Logistics Technician (05/2023 - 07/2023) - Ingram Micro, Stockholm",
+                warehouseWorker1: "Warehouse Worker (11/2022 - 02/2023) - PerformIQ, Stockholm",
+                warehouseWorker2: "Warehouse Worker (11/2021 - 09/2022) - Tranpenad AB, Stockholm",
+                networkTech: "Network Technician (2008 - 2011) - TechnoSpect, Damascus",
+                auditor1: "Auditor (2006 - 2007) - United Metals, Homs",
+                auditor2: "Auditor (2002 - 2006) - Edwards Company, Homs",
+                jensen: "Jensen (10/2019 - 12/2020): Network and Support Technician",
+                competens: "Competens (02/2017 - 08/2019): SFI and Basic Education",
+                tishreen: "Tishreen University (2003 - 2008): Bachelor's Degree in Economics and Accounting",
+                googleIT: "Google IT Support (Google): Certificate ID: 28X4U5VCUC5G.",
+                htmlCert: "HTML, CSS, and JavaScript for Web Developers (Coursera): Certificate ID: 7BLPNAX4AA9M.",
+                sharepointCert: "SharePoint Online (Alison): Certificate ID: 4349-29701203.",
+                arabic: "Arabic: Native speaker.",
+                swedish: "Swedish: Good knowledge.",
+                english: "English: Good knowledge."
+            };
+
+            if (isSwedish) {
+                summary.innerHTML = swedishTexts.summary;
+                skillsTitle.innerHTML = swedishTexts.skillsTitle;
+                educationTitle.innerHTML = swedishTexts.educationTitle;
+                certificateTitle.innerHTML = swedishTexts.certificateTitle;
+                languageTitle.innerHTML = swedishTexts.languageTitle;
+
+                document.getElementById("support-tech").innerHTML = swedishTexts.supportTech;
+                document.getElementById("logistics-tech").innerHTML = swedishTexts.logisticsTech;
+                document.getElementById("warehouse-worker1").innerHTML = swedishTexts.warehouseWorker1;
+                document.getElementById("warehouse-worker2").innerHTML = swedishTexts.warehouseWorker2;
+                document.getElementById("network-tech").innerHTML = swedishTexts.networkTech;
+                document.getElementById("auditor1").innerHTML = swedishTexts.auditor1;
+                document.getElementById("auditor2").innerHTML = swedishTexts.auditor2;
+                document.getElementById("jensen").innerHTML = swedishTexts.jensen;
+                document.getElementById("competens").innerHTML = swedishTexts.competens;
+                document.getElementById("tishreen").innerHTML = swedishTexts.tishreen;
+                document.getElementById("google-it").innerHTML = swedishTexts.googleIT;
+                document.getElementById("html-cert").innerHTML = swedishTexts.htmlCert;
+                document.getElementById("sharepoint-cert").innerHTML = swedishTexts.sharepointCert;
+                document.getElementById("arabic").innerHTML = swedishTexts.arabic;
+                document.getElementById("swedish").innerHTML = swedishTexts.swedish;
+                document.getElementById("english").innerHTML = swedishTexts.english;
+
+                isSwedish = false;
+            } else {
+                summary.innerHTML = englishTexts.summary;
+                skillsTitle.innerHTML = englishTexts.skillsTitle;
+                educationTitle.innerHTML = englishTexts.educationTitle;
+                certificateTitle.innerHTML = englishTexts.certificateTitle;
+                languageTitle.innerHTML = englishTexts.languageTitle;
+
+                document.getElementById("support-tech").innerHTML = englishTexts.supportTech;
+                document.getElementById("logistics-tech").innerHTML = englishTexts.logisticsTech;
+                document.getElementById("warehouse-worker1").innerHTML = englishTexts.warehouseWorker1;
+                document.getElementById("warehouse-worker2").innerHTML = englishTexts.warehouseWorker2;
+                document.getElementById("network-tech").innerHTML = englishTexts.networkTech;
+                document.getElementById("auditor1").innerHTML = englishTexts.auditor1;
+                document.getElementById("auditor2").innerHTML = englishTexts.auditor2;
+                document.getElementById("jensen").innerHTML = englishTexts.jensen;
+                document.getElementById("competens").innerHTML = englishTexts.competens;
+                document.getElementById("tishreen").innerHTML = englishTexts.tishreen;
+                document.getElementById("google-it").innerHTML = englishTexts.googleIT;
+                document.getElementById("html-cert").innerHTML = englishTexts.htmlCert;
+                document.getElementById("sharepoint-cert").innerHTML = englishTexts.sharepointCert;
+                document.getElementById("arabic").innerHTML = englishTexts.arabic;
+                document.getElementById("swedish").innerHTML = englishTexts.swedish;
+                document.getElementById("english").innerHTML = englishTexts.english;
+
+                isSwedish = true;
+            }
         }
     </script>
 </head>
@@ -150,18 +233,18 @@
         <p>0729294645</p>
         <p><a href="mailto:darwin.haddad@gmail.com">darwin.haddad@gmail.com</a></p>
         <button class="btn" onclick="toggleLanguage()">Byt språk</button>
-        <button class="btn" onclick="downloadCV()">Ladda ner CV</button>
+        <a href="cv.pdf" class="btn" download>Hämta CV (PDF)</a>
     </div>
 
     <div class="content">
         <div class="section">
-            <h2 id="summary-title">Sammanfattning</h2>
-            <p id="summary">Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet. Starkt samarbetsförmåga och vana att lösa komplexa tekniska problem.</p>
+            <h2 id="summary">Sammanfattning</h2>
+            <p id="summary-text">Erfaren IT-supporttekniker med kompetens inom installation, konfiguration och felsökning av IT-system. Expert på användarsupport och operativa uppgifter, med bevisad förmåga att förbättra systemeffektivitet och användarnöjdhet. Starkt samarbetsförmåga och vana att lösa komplexa tekniska problem.</p>
         </div>
 
         <div class="section">
             <h2 id="skills-title">Kunskaper och färdigheter</h2>
-            <h3>Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm</h3>
+            <h3 id="support-tech">Supporttekniker (08/2023 - 02/2024) - Fujitsu, Stockholm</h3>
             <ul>
                 <li>Installation, konfiguration och felsökning av hård- och mjukvara.</li>
                 <li>Utförande av rutinmässiga driftuppgifter.</li>
@@ -170,7 +253,7 @@
                 <li>Följa fördefinierade arbetsinstruktioner.</li>
             </ul>
 
-            <h3>Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm</h3>
+            <h3 id="logistics-tech">Logistiktekniker (05/2023 - 07/2023) - Ingram Micro, Stockholm</h3>
             <ul>
                 <li>Konfigurering av datorer, servrar och telefoner.</li>
                 <li>Stöldskyddsmärkning och rapportering av enheter samt sammanställning i kundfiler.</li>
@@ -179,35 +262,35 @@
                 <li>Arbeta med höga krav på noggrannhet och kvalitet.</li>
             </ul>
 
-            <h3>Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm</h3>
+            <h3 id="warehouse-worker1">Lagerarbetare (11/2022 - 02/2023) - PerformIQ, Stockholm</h3>
             <ul>
                 <li>Skanning av produkter i affärssystem.</li>
                 <li>Samordning av produkter enligt plocklistor.</li>
                 <li>Lastning av kurirbilar.</li>
             </ul>
 
-            <h3>Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm</h3>
+            <h3 id="warehouse-worker2">Lagerarbetare (11/2021 - 09/2022) - Tranpenad AB, Stockholm</h3>
             <ul>
                 <li>Skanning av produkter i affärssystem.</li>
                 <li>Samordning av produkter enligt plocklistor.</li>
                 <li>Lastning av kurirbilar.</li>
             </ul>
 
-            <h3>Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus</h3>
+            <h3 id="network-tech">Nätverkstekniker (2008 - 2011) - TechnoSpect, Damaskus</h3>
             <ul>
                 <li>Installation och underhåll av nätverksutrustning.</li>
                 <li>Installation och konfiguration av hård- och mjukvara.</li>
                 <li>Uppgradering och felsökning av datorsystem.</li>
             </ul>
 
-            <h3>Revisor (2006 - 2007) - United Metals, Homs</h3>
+            <h3 id="auditor1">Revisor (2006 - 2007) - United Metals, Homs</h3>
             <ul>
                 <li>Förbereda bokföringsposter.</li>
                 <li>Förbereda finansiella rapporter.</li>
                 <li>Utföra redovisning och rapportering.</li>
             </ul>
 
-            <h3>Revisor (2002 - 2006) - Edwards Företag, Homs</h3>
+            <h3 id="auditor2">Revisor (2002 - 2006) - Edwards Företag, Homs</h3>
             <ul>
                 <li>Förbereda inköpsordrar och försäljningsfakturor.</li>
                 <li>Redovisningsrapportering.</li>
@@ -217,23 +300,23 @@
 
         <div class="section">
             <h2 id="education-title">Utbildning</h2>
-            <p><strong>Jensen</strong> (10/2019 - 12/2020): Nätverk och Supporttekniker</p>
-            <p><strong>Competens</strong> (02/2017 - 08/2019): SFI och Grundläggande Utbildning</p>
-            <p><strong>Tishreen Universitet</strong> (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning</p>
+            <p id="jensen"><strong>Jensen</strong> (10/2019 - 12/2020): Nätverk och Supporttekniker</p>
+            <p id="competens"><strong>Competens</strong> (02/2017 - 08/2019): SFI och Grundläggande Utbildning</p>
+            <p id="tishreen"><strong>Tishreen Universitet</strong> (2003 - 2008): Kandidatexamen i Ekonomi och Redovisning</p>
         </div>
 
         <div class="section">
             <h2 id="certificate-title">Certifikat</h2>
-            <p>Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.</p>
-            <p>HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.</p>
-            <p>SharePoint Online (Alison): Certifikat ID: 4349-29701203.</p>
+            <p id="google-it">Google IT Support (Google): Certifikat ID: 28X4U5VCUC5G.</p>
+            <p id="html-cert">HTML, CSS, and JavaScript for Web Developers (Coursera): Certifikat ID: 7BLPNAX4AA9M.</p>
+            <p id="sharepoint-cert">SharePoint Online (Alison): Certifikat ID: 4349-29701203.</p>
         </div>
 
         <div class="section">
             <h2 id="language-title">Språk</h2>
-            <p><strong>Arabiska:</strong> Modersmål.</p>
-            <p><strong>Svenska:</strong> Goda kunskaper.</p>
-            <p><strong>Engelska:</strong> Goda kunskaper.</p>
+            <p id="arabic"><strong>Arabiska:</strong> Modersmål.</p>
+            <p id="swedish"><strong>Svenska:</strong> Goda kunskaper.</p>
+            <p id="english"><strong>Engelska:</strong> Goda kunskaper.</p>
         </div>
     </div>
 
